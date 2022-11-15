@@ -12,3 +12,6 @@
 <p><%= check = @task.completed ? "✅This task is completed" : "⛔This task is not completed yet" %></p>
 
 <%= link_to 'Back to list', tasks_path %>
+
+<p> <%= link_to "Delete", destroy_task_path(@tasks),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%> </p>
